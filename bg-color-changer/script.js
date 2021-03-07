@@ -11,12 +11,14 @@ const colors = [
     'brown'
 ];
 
-body.style.backgroundColor = 'maroon';
-button.style.margin = '0 auto';
+body.style.backgroundColor = 'steelblue';
+
+document.getElementById("btn").addEventListener("click", randomColor);
 
 function randomColor(colors){
-    return color[Math.floor(Math.random() * colors.length)];
+    return colors[Math.floor(Math.random() * colors.length)];
 }
 
 
-button.addEventListener("click", randomColor);
+
+
