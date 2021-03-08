@@ -1,24 +1,19 @@
 const button = document.querySelector('button');
 const body = document.querySelector('body');
-
 const colors = [
-    'red', 
-    'blue', 
+    'maroon', 
+    'navyblue', 
     'green', 
     'purple', 
     'orange', 
-    'yellow', 
+    'Gold', 
     'brown'
 ];
 
 body.style.backgroundColor = 'steelblue';
+button.addEventListener('click', randomColor);
 
-document.getElementById("btn").addEventListener("click", randomColor);
-
-function randomColor(colors){
-    return colors[Math.floor(Math.random() * colors.length)];
-}
-
-
-
-
+function randomColor(){
+    const changeColor = parseInt(Math.random()*colors.length);
+    body.style.backgroundColor = colors[changeColor];
+};
