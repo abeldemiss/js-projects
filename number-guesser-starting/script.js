@@ -3,8 +3,8 @@ let computerScore = 0;
 let currentRoundNumber = 1;
 
 // Write your code below:
-let generateTarget = () => {
-  return Math.floor(Math.random * 10);
+const generateTarget = () => {
+  return Math.floor(Math.random() * 10);
 };
 
 const compareGuesses = (humanGuess, computerGuess, generateTarget) => {
@@ -18,4 +18,18 @@ const compareGuesses = (humanGuess, computerGuess, generateTarget) => {
   } else {
     return false;
   }
+};
+
+const updateScore = (winner) => {
+  if (winner === "human") {
+    humanScore++;
+  } else if (winner === "computer") {
+    computerScore++;
+  } else {
+    console.log("Error, enter human or computer.");
+  }
+};
+
+const advanceRound = () => {
+  currentRoundNumber++;
 };
